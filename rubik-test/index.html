@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #222;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        #game-container {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #00ff88;
+        }
+        #gameCanvas {
+            border: 2px solid white;
+            background-color: #000;
+        }
+        #instructions {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ccc;
+        }
+        #ui {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Tetris</h1>
+        <div style="position: relative;">
+            <canvas id="gameCanvas" width="500" height="700"></canvas>
+            <div id="ui">
+                <div>Score: <span id="score">0</span></div>
+                <div>Lines: <span id="lines">0</span></div>
+                <div>Level: <span id="level">1</span></div>
+                <div style="margin-top: 20px;">
+                    <div>Next:</div>
+                    <canvas id="nextCanvas" width="100" height="100"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="instructions">
+            <p>Use arrow keys to play:</p>
+            <p>← → Move left/right | ↓ Drop faster | ↑ Rotate</p>
+            <p id="gameOverText" style="display: none; color: red; font-size: 20px;">Game Over! Press R to restart</p>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
