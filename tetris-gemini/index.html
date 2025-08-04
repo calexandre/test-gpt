@@ -2,9 +2,14 @@
 <html>
 <head>
     <title>Tetris</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e67eCKHubaM54SjKUBgYEV3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="bg-gray-800">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-white text-4xl text-center">Tetris</h1>
+        <canvas id="tetris" width="240" height="400" class="mx-auto mt-5 border-4 border-gray-900"></canvas>
+    </div>
+
+    <script src="game.js"></script>
 </body>
 </html>
